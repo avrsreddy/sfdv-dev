@@ -1,0 +1,32 @@
+<apex:page showHeader="true" sidebar="true"  standardController="Account"  recordSetVar="accounts" lightningStylesheets="true" title="Sfdc training" >
+  <!-- Begin Default Content REMOVE THIS -->
+  
+    Welcome To Mr. {! $User.firstName}
+  <apex:form > 
+  <apex:pageBlock >
+  <apex:pageBlocksection title="Account Details" >
+  
+      <apex:pageblockTable value="{!accounts}" var="account">
+       <!-- <apex:column headerValue="Account Name">
+            <apex:outputField value="{!account.Name}"/>
+        </apex:column>
+        <apex:column headerValue="Account Number">
+            <apex:outputField value="{!account.AccountNumber}"/>
+        </apex:column>-->
+        <apex:column value="{!account.Name}"/>
+        <apex:column value="{!account.AccountNumber}"/>
+        <apex:column value="{!account.Rating}"/>
+        <apex:column value="{!account.Website}"/>
+         <apex:column value="{!account.Industry}"/>
+      </apex:pageblockTable>
+      
+  </apex:pageBlocksection> 
+  <apex:pageblockButtons >
+          <apex:commandButton action="{!save}" value="save"/>
+          <apex:commandButton action="{!cancel}" value="cancel"/>
+      </apex:pageblockButtons>
+  </apex:pageBlock>
+  </apex:form> 
+  
+  
+</apex:page>

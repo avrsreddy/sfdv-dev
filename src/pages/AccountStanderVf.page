@@ -1,0 +1,17 @@
+<apex:page tabStyle="Case" standardController="Account">
+    <h1>
+        Welcome to my first standerd visuval page example
+    </h1>
+   <!-- <apex:pageBlock title="Case Block">
+    	<apex:pageBlockSection title="Case Details Section" collapsible="false">
+            <apex:pageBlockTable value="{!case}" var="case">
+        	<apex:column value="{!case.Account}"/>
+            <apex:column  value="{!case.Status}"/>
+                <apex:column value="{!case.Priority}"/>
+                <apex:column value="{!case.SuppliedEmail}"/>
+                <apex:column value="{!case.EngineeringReqNumber__c}"/>
+                 </apex:pageBlockTable>
+        </apex:pageBlockSection>
+    </apex:pageBlock>-->
+    
+</apex:page>

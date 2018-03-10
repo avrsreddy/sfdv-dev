@@ -1,0 +1,38 @@
+<apex:page controller="ClsController" > <!--//tabStyle="Account" will used to override the object page-->
+<!--<apex:image url="{!$Resource.YSRflag}"/>-->
+<img src="{!$Resource.YSRflag}" height="90" width="200"/>
+ 
+  <apex:form >
+    <apex:actionFunction action="{!doSearch}" name="doSearchAction" reRender="myContact"/>
+  <div>
+  <label>Search Contact</label>
+  <apex:inputText value="{!searchString}" onkeyup="doSearchAction()"/>
+  </div>
+  <apex:pageBlock title="Contacts" id="myContact">
+  <apex:pageblockButtons >
+      <apex:commandButton value="save" action="{!save}"/>
+  </apex:pageblockButtons>
+    <apex:pageBlockTable value="{!contacts}" var="contact" >
+      <apex:column value="{!contact.name}"/>
+      <apex:column value="{!contact.accountId}"/>
+      <apex:column >
+       <apex:inputField value="{!contact.email}"/>
+       </apex:column>
+      <apex:column value="{!contact.phone}"/>
+      
+  </apex:pageBlockTable>
+    </apex:pageBlock>
+    <h1> Data table exapmle</h1>
+    <apex:pageBlock >
+    <apex:dataTable value="{!contacts}" var="contact" cellpadding="4" border="1" bgcolor="white">
+    <apex:column value="{!contact.name}" headerValue="Contact Name"/>
+    <apex:column headerValue="Account Name">
+    <apex:outputField value="{!contact.accountId}">
+    <apex:inlineEditSupport event="onclick"/>
+    </apex:outputField>
+    </apex:column>
+    </apex:dataTable>
+    </apex:pageBlock>
+</apex:form>
+
+</apex:page>

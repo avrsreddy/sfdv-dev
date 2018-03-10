@@ -1,0 +1,8 @@
+Dear {!Apponment__c.Patient__c},
+
+Your appoinment has been confirmed with {!Apponment__c.Doctor__c} between {!Apponment__c.From__c} +'--' +{!Apponment__c.To__c}.
+
+
+
+Thanks,
+Admin

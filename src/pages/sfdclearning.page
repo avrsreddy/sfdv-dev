@@ -1,0 +1,7 @@
+<apex:page action="{!URLFOR($Action.Account.List, $ObjectType.Account)}">
+  <h1>Welcome to my first vf page</h1>
+  <br></br><br></br>
+  hello {!$User.FirstName}
+
+  <!--<apex:detail subject="{!account.ownerId}" relatedList="true" title="true" />  tag is used to display the details page of an object -->
+</apex:page>

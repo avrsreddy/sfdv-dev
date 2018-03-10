@@ -1,0 +1,9 @@
+<apex:page standardController="Knowledge__kav">
+
+	<apex:pageBlock title="Knowledge">
+    	<apex:pageBlockSection >
+        {!Knowledge__kav.ArticleNumber}
+        </apex:pageBlockSection>
+    </apex:pageBlock>    
+
+</apex:page>

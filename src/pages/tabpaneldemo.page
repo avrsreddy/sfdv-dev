@@ -1,0 +1,28 @@
+<!-- Page: -->
+<apex:page id="thePage" standardController="Account" >
+ <style>
+      .activeTab {background-color: #236FBD; color:white; 
+         background-image:none}
+      .inactiveTab { background-color: lightgrey; color:black; 
+         background-image:none}
+   </style>
+    <apex:tabPanel switchType="client" selectedTab="name1" id="theTabPanel">
+        <apex:tab label="One" name="name1" id="tabOne">
+        <apex:relatedList list="Contact"/>
+        </apex:tab>
+        <apex:tab label="Two" name="name2" id="tabTwo">content for tab two</apex:tab>
+    </apex:tabPanel>
+    
+    <apex:form >
+    <apex:pageBlock title="Account details" >
+    <apex:pageBlockSection title="Account Section " columns="1">
+    <apex:inputField value="{!account.name}" taborderhint="1"/>
+    <apex:inputCheckbox disabled="false" label="checkbox" tabindex="2"/>
+    <apex:inputtext label="text" tabindex="4"/>        
+    <apex:inputTextarea richText="true" label="Text Area" tabindex="3"/>
+    <apex:inputField value="{!account.industry}"/>
+    <apex:inputField value="{!account.Subcatagery__c}"/><!-- controllin gfield must include in the page other wise run time error will triwn dependent pickmlist value -->
+    </apex:pageBlockSection>
+    </apex:pageBlock>
+    </apex:form>
+</apex:page>
